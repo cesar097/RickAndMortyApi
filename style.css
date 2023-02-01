@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 30px auto;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(25, 19, 146) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.pageTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageTitle a h1 {
+  position: relative;
+  font-size: 4vh;
+  color: white;
+  -webkit-text-stroke: 0.3vw white;
+  text-transform: uppercase;
+}
+
+.pageTitle a h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: blue;
+    -webkit-text-stroke: 0vw white;
+    border-right: 2px solid blue;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%, 10%, 100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+
+
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  .nav-item {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        font-size: 20px;
+  }
+
+  .nav-item .nav-link:hover {
+    color: rgba(9,9,121,1);
+    transform: translateY(-5px);
+  }
+  
+  .d-flex {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+
+
+
+body h2 {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: flex-end;
+    height:  50px;
+    width: 100%;
+}
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+
+  nav  a {
+    color: red;
+  }
+
+
+
+
+
+#resultado {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 30px 10px;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+}
+
+.card:hover {
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h5 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card p {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
